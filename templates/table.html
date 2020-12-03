@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Table</title>
+        <script type="text/javascript" src="{{ url_for('static',    filename='javascript/spider.js') }}"></script>
+        <script>
+            var i;
+            var arr=[['ID','URL','Rank','Weight']];
+            for(i=0;i<spiderJson.nodes.length;i++){
+                arr.push([spiderJson.nodes[i].id,spiderJson.nodes[i].url,spiderJson.nodes[i].rank,spiderJson.nodes[i].weight]);              
+            }
+            
+        </script>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static',    filename='css/header.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static',    filename='css/table.css') }}">
+    </head>
+    <body>
+
+        <header>
+            <h1><a href="{{ url_for('my_form') }}">Web Crawler</a></h1>
+            <nav>
+                <a href="{{ url_for('chart') }}">Chart</a>
+                <a href="{{ url_for('rank') }}">Rank</a>
+                <a href="{{ url_for('weight') }}">Weight</a>
+                <a href="{{ url_for('table') }}" class="active">Table</a>
+            </nav>
+          </header>
+
+        <table>
+            <script type="text/javascript">
+                var j;
+                for(j=0;j<arr.length;j++)
+                {
+                    document.write("<tr>"+
+                        "<td>"+arr[j][0]+"<td>"+
+                        "<td>"+arr[j][1]+"<td>"+
+                        "<td>"+arr[j][2]+"<td>"+
+                        "<td>"+arr[j][3]+"<td>"
+                            +"</tr>");
+                }
+            </script>
+        </table>
+    </body>
+</html>

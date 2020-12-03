@@ -1,0 +1,36 @@
+table{
+    border-collapse: collapse;
+    color:#000000;
+    font-family: sans-serif;
+}
+td{
+    padding: 8px;
+}
+
+tr{
+    background-color: rgb(106, 182, 226);
+}
+
+tr:nth-child(even){
+    background-color: rgb(129, 87, 184);
+}
+
+tr:nth-child(1){
+    background-color:rgb(3, 3, 53);
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+tr:hover{
+    background-color: rgba(255, 230, 0, 1);     
+    font-weight: bolder;   
+}
+
+tr:nth-child(1):hover{
+    background-color:rgb(3, 3, 53);
+}
+
+td:nth-child(3){
+    text-align: left;
+}

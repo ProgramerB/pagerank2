@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chart</title>
+    <script type="text/javascript" src="{{ url_for('static',    filename='javascript/d3.v2.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',    filename='javascript/spider.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static',    filename='css/force.css') }}"/>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static',    filename='css/header.css') }}">
+  </head>
+  <body style="font-family: sans-serif;">
+
+    <header>
+      <h1><a href="{{ url_for('my_form') }}">Web Crawler</a></h1>
+      <nav>
+        <a href="{{ url_for('chart') }}" class="active">Chart</a>
+        <a href="{{ url_for('rank') }}">Rank</a>
+        <a href="{{ url_for('weight') }}">Weight</a>
+        <a href="{{ url_for('table') }}">Table</a>
+      </nav>
+    </header>
+
+    <div id="chart" style="border:1px"></div>
+    <script type="text/javascript" src="{{ url_for('static',    filename='javascript/force.js') }}"></script>
+  </body>
+  <footer>
+    <script>
+      document.write("<p>Starting URL: "+spiderJson.nodes[0].url+"</p>");
+  </script>
+  </footer>
+</html>

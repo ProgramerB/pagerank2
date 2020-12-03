@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static',    filename='css/header.css') }}">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static',    filename='css/myformsss.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1><a href="{{ url_for('my_form') }}">Web Crawler</a></h1>
+        <nav>
+          <a href="{{ url_for('chart') }}">Chart</a>
+          <a href="{{ url_for('rank') }}">Rank</a>
+          <a href="{{ url_for('weight') }}">Weight</a>
+          <a href="{{ url_for('table') }}">Table</a>
+        </nav>
+      </header>
+    <form action="" method="POST">
+        <input type="url" name="text1" placeholder="URL to Crawl">
+        <input type="number" name="text2" min="1" placeholder="Number of Nodes/Pages">
+        <!--input type="submit" name="my-form" value="Check !" /-->
+        <div>
+        <input type="submit" name="spider" id="spider" value="spider">
+        <input type="submit" name="sprank" id="sprank" value="sprank">
+        <input type="submit" name="spjson" id="spjson" value="spjson">
+        <!---nput type="submit" name="download" value="Download">
+        <input type="submit" name="watch" value="Watch"-->
+        </div>
+    </form>
+</body>
+</html>
