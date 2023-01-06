@@ -16,15 +16,16 @@
           <a href="{{ url_for('table') }}">Table</a>
         </nav>
       </header>
+      <div>Current URL: {{site}}</div>
     <form action="" method="POST">
         <input type="url" name="text1" placeholder="URL to Crawl">
         <input type="number" name="text2" min="1" placeholder="Number of Nodes/Pages">
         <!--input type="submit" name="my-form" value="Check !" /-->
         <div>
-        <input type="submit" name="spider" id="spider" value="spider">
-        <input type="submit" name="sprank" id="sprank" value="sprank">
-        <input type="submit" name="spjson" id="spjson" value="spjson">
-        <input type="submit" name="spremove" id="spremove" value="spremove">
+        <input type="submit" name="spider" id="spider" value="Crawl">
+        <input type="submit" name="sprank" id="sprank" value="Rank">
+        <input type="submit" name="spjson" id="spjson" value="Dump">
+        <input type="submit" name="spremove" id="spremove" value="Clear">
         <!---nput type="submit" name="download" value="Download">
         <input type="submit" name="watch" value="Watch"-->
         </div>
