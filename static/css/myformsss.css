@@ -69,8 +69,11 @@ input[type=submit]{
   }
   
   body{
-      background-image: url("https://www.microscopemaster.com/images/spiderweb.jpg");
+      /* background-image: url("https://www.microscopemaster.com/images/spiderweb.jpg"); */
       background-position: center;
+      background-image:url("spider.png");
+    background-repeat: no-repeat;
+    text-align:center;
   }
 
 
