@@ -3,6 +3,7 @@ from flask import request
 from flask import render_template
 import os
 import spider,sprank,spjson
+import sqlite3
 #import stringComparison
 
 app = Flask(__name__)
@@ -29,6 +30,16 @@ def my_form_post():
     elif 'spjson' in request.form:
         spjson.spjson(int(text2))
         return render_template("table.html")
+    elif 'spremove' in request.form:
+        conn = sqlite3.connect('spider.sqlite')
+        cur = conn.cursor()
+        cur.execute('''DROP TABLE Pages''')
+        cur.execute('''DROP TABLE Links''')
+        cur.execute('''DROP TABLE Webs''')
+        conn.commit()
+        cur.close()
+
+        print("All tables droped")
 
 @app.route('/chart')
 def chart():
